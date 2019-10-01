@@ -17,6 +17,27 @@ struct ContentView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
             Text("Hello, \(name)")
+            Button(action: {
+                print("Button pressed....")
+                
+            }) {
+                VStack {
+                    Image(systemName: "rectangle.grid.1x2.fill")
+                    HStack {
+                        Image(systemName: "rectangle.grid.1x2.fill")
+                        Text("Press me")
+                            .padding()
+                            .foregroundColor(.white)
+                            .font(.largeTitle)
+                        Image(systemName: "rectangle.grid.1x2.fill")
+                    }
+                    Image(systemName: "rectangle.grid.1x2.fill")
+                }
+            }.padding()
+                .background(Color.orange)
+                .cornerRadius(15.0)
+            
+                
         }.padding()
     }
 }
@@ -26,3 +47,5 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
