@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct ContentView: View {
     
@@ -19,7 +20,9 @@ struct ContentView: View {
             Text("Hello, \(name)")
             Button(action: {
                 print("Button pressed....")
-                
+                let uttrance = AVSpeechUtterance(string: "HELLO MY FRIEND")
+                let speech = AVSpeechSynthesizer()
+                speech.speak(uttrance)
             }) {
                 VStack {
                     Image(systemName: "rectangle.grid.1x2.fill")
